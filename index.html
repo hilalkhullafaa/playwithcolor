@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bermain Dengan Warna</title>
+    <style>
+      *,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .container .game-menu {
+        max-width: 500px;
+        padding: 25px;
+        /* background-color: #ccc; */
+        border-radius: 25px;
+        font-family: cursive;
+        box-shadow: 0 0 25px #333;
+      }
+
+      @media (max-width: 587px) {
+        .game-menu {
+          width: 300px;
+        }
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px;
+        border-radius: 25px;
+        border: 1px solid #333;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .kotak {
+        height: 50px;
+        width: 50px;
+        margin: 15px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #eee;
+        border-radius: 10px;
+      }
+
+      .merah {
+        background-color: red;
+      }
+
+      .hijau {
+        background-color: green;
+      }
+
+      .biru {
+        background-color: blue;
+      }
+
+      input {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-menu">
+        <h1>Bermain dengan warna</h1>
+
+        <div class="acak-warna">
+          <button id="acakWarna" type="button">Acak Warna</button>
+        </div>
+
+        <div class="slide-warna">
+          <div class="kotak merah"></div>
+          <input type="range" name="kotak-merah" min="0" max="255" />
+
+          <div class="kotak hijau"></div>
+          <input type="range" name="kotak-hijau" min="0" max="255" />
+
+          <div class="kotak biru"></div>
+          <input type="range" name="kotak-biru" min="0" max="255" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
